@@ -4,17 +4,26 @@ public class Main {
     System.out.println("TV's current status");
     System.out.println();
   
+  System.out.println("LG television");
   Television LG = new Television();
+  LG.setTurnedOn(false);
   LG.setVolume(0);
   LG.setProgram(1);
-  LG.setTurnedOn(false);
   LG.printInConsole();
 
+  System.out.println("Samsung television");
   Television Samsung = new Television();
+  Samsung.setTurnedOn(true);
   Samsung.setVolume(55);
   Samsung.setProgram(12);
-  Samsung.setTurnedOn(true);
   Samsung.printInConsole();
+
+  System.out.println("VOX television");
+  Television VOX = new Television();
+  VOX.setTurnedOn(true);
+  VOX.setVolume(55);
+  VOX.setProgram(12);
+  VOX.printInConsole();
 
   Radio TDI = new Radio();
   TDI.setFm(91.8f);

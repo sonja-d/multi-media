@@ -4,14 +4,23 @@ public class Television {
   private boolean turnedOn;
 
   public void setVolume(int volumeLevel){
-    this.volume = volumeLevel;
+    if (this.getTurnedOn()){
+      this.volume = volumeLevel;
+    }else{
+      System.out.println("TV is off. Can't set volume");
+    }
   }
   public int getVolume(){
     return this.volume;
   }
 
   public void setProgram(int programNumber){
-    this.currentProgram = programNumber;
+   if (this.getTurnedOn()){
+        this.currentProgram = programNumber;
+   }else{
+     System.out.println("TV is off.Can't set program");
+   }
+    
   }
   public int getProgram(){
     return this.currentProgram;
