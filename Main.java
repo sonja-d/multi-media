@@ -6,21 +6,21 @@ public class Main {
   
   System.out.println("LG television");
   Television LG = new Television();
-  LG.setTurnedOn(false);
+  LG.turnOff();
   LG.setVolume(0);
   LG.setProgram(1);
   LG.printInConsole();
 
   System.out.println("Samsung television");
   Television Samsung = new Television();
-  Samsung.setTurnedOn(true);
+  Samsung.turnOn();
   Samsung.setVolume(55);
   Samsung.setProgram(12);
   Samsung.printInConsole();
 
   System.out.println("VOX television");
   Television VOX = new Television();
-  VOX.setTurnedOn(true);
+  VOX.turnOn();
   VOX.setVolume(55);
   VOX.setProgram(12);
   VOX.printInConsole();

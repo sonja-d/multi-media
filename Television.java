@@ -1,10 +1,10 @@
 public class Television {
   private int volume;
   private int currentProgram;
-  private boolean turnedOn;
+  private boolean power;
 
   public void setVolume(int volumeLevel){
-    if (this.getTurnedOn()){
+    if (this.isOn()){
       this.volume = volumeLevel;
     }else{
       System.out.println("TV is off. Can't set volume");
@@ -15,7 +15,7 @@ public class Television {
   }
 
   public void setProgram(int programNumber){
-   if (this.getTurnedOn()){
+   if (this.isOn()){
         this.currentProgram = programNumber;
    }else{
      System.out.println("TV is off.Can't set program");
@@ -26,16 +26,29 @@ public class Television {
     return this.currentProgram;
   }
 
-  public void setTurnedOn(boolean tvOn){
-    this.turnedOn = tvOn;
+  public void setPower(boolean tvPower){
+    this.power = tvPower;
   }
-  public boolean getTurnedOn(){
-    return this.turnedOn;
+  public boolean getPower(){
+    return this.power;
   }
+
+  public void turnOn() {
+    this.power = true;
+  }
+
+  public void turnOff() {
+    this.power = false;
+  }
+
+  public boolean isOn() {
+    return this.power;
+  }
+
   public void printInConsole(){
     System.out.println("Volume is: " + this.getVolume());
     System.out.println("Current program is: " + this.getProgram());
-    System.out.println("The TV is turned on: " + this.getTurnedOn());
+    System.out.println("The TV power: " + this.isOn());
     System.out.println();
   }
 }
